@@ -20,7 +20,7 @@ module.exports={
 			chunks:['page1']
 		})
 	],
-	devtool:'source-map',  //直接生成sorce-map文件
+	//devtool:'source-map',  //直接生成sorce-map文件
 	module:{
 		loaders:[
 		{test:/\.css$/,loader:'style-loader!css-loader'},

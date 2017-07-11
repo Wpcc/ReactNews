@@ -36,14 +36,30 @@ html{
 }
 
 /*——————container——————*/
+.father-container{
+    display: flex !important;
+    justify-content: center;
+}
+
 .container{
 	padding-top: 10px;
+    display: flex !important;
+    justify-content: center;
+    width: 1105px !important;
+}
+
+.second-container{
+    margin-top: 10px;
+    width: 1105px !important;
+    display: flex !important;
+    justify-content: center;
 }
 
 .leftContainer{
 	float: left;
 	margin-right: 10px;
 }
+
 /*轮播图*/
 .leftContainer{
 	width:400px;
@@ -58,7 +74,10 @@ html{
 }
 
 .centerContainer{
-	width: 400px;
+	
+}
+.centerContainer-width{
+    width: 400px;
 }
 .newsText .ant-card-body{
 	padding-top: 12px;
@@ -91,7 +110,21 @@ html{
 	width:112px;
 }
 
-/*详情页*/
+/*-----rightContainer-----*/
+.rightContainer{
+    margin-left: 10px;
+}
+.rightContainer-width{
+     width:285px;
+}
+
+.productlinks-item{
+    margin-top: 10px;
+    line-height: 20px;
+    font
+}
+
+/*------详情页--------*/
 .newsDetails{
 	margin-top: 10px;
 }
@@ -195,8 +228,17 @@ html{
     margin-top: -.21rem;
     left: .66rem
 }
+/*评论*/
+.comments .textarea{
+    width: 100%;
+    height: 10rem;
+}
+
 
 /*——————footer——————*/
+.father-footer{
+    text-align: center;
+}
 .footer{
-	text-align: center;
+	margin:50px 0;
 }

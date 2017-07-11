@@ -7,6 +7,7 @@ import {
 } from 'antd';
 
 import PCNewsImage from './pc_news_image';
+import CommonComments from './common_comments.js';
 
 export default class PCNewsDetails extends React.Component{
 	constructor(...args){
@@ -25,7 +26,8 @@ export default class PCNewsDetails extends React.Component{
 		.then(response=>response.json())
 		.then(json=>{
 			this.setState({newsDetails:json})
-			document.title=this.state.newsDetails.title+' - React News | React 驱动的新闻平台'
+			document.title=this.state.newsDetails.title+' - React News | React 驱动的新闻平台';
+			console.log(this.props.match.params.uniquekey)
 			}
 		)
 	}
@@ -33,21 +35,22 @@ export default class PCNewsDetails extends React.Component{
 	createNewsDetails(){
 		return {__html: this.state.newsDetails.pagecontent}
 	}
-	render(){
-		
 
+	render(){
 		return(
 			<div className="newsDetails">
 				<Row>
 					<Col span={2}></Col>
 					<Col span={14}>
 						<div className="articleContainer" dangerouslySetInnerHTML={this.createNewsDetails()}></div>
+						<CommonComments uniquekey={this.props.match.params.uniquekey} />
 					</Col>
 					<Col span={6}>
 						<PCNewsImage count={40} type={"guoji"} imageTitle={"国际"} />
 					</Col>
 					<Col span={2}></Col>
 				</Row>
+
 				<BackTop/>
 			</div>
 		)

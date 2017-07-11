@@ -8,6 +8,7 @@ import {
 
 import MobileHeader from './mobile_header.js';
 import MobileFooter from './mobile_footer.js';
+import CommonComments from './common_comments.js';
 
 export default class MobileNewsDetails extends React.Component{
 	constructor(...args){
@@ -43,6 +44,7 @@ export default class MobileNewsDetails extends React.Component{
 				<Row>
 					<Col span={24}>
 						<div className="articleContainer" dangerouslySetInnerHTML={this.createNewsDetails()}></div>
+						<CommonComments uniquekey={this.props.match.params.uniquekey} />
 					</Col>
 				</Row>
 				<MobileFooter/>

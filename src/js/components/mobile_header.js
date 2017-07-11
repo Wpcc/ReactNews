@@ -73,6 +73,7 @@ class MobileHeader extends React.Component{
 		       	.then(response=>response.json())
 		       	.then(json=>{
 		       		this.setState({userNickName:json.NickUserName,userid:json.UserId});
+		       		// 储存账号密码
 		       		localStorage.userId=json.UserId;
 		       		localStorage.userNickName=json.NickUserName;
 		       	})
@@ -140,7 +141,7 @@ class MobileHeader extends React.Component{
 
 		return(
 			<header id='mobileHeader'>
-				<img src="/src/img/logo.png" alt="log"/>
+				<img src="../src/img/logo.png" alt="log"/>
 				<span>ReactNews</span>
 				{userShow}
 

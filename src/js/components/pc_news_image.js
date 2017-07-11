@@ -60,7 +60,7 @@ export default class PCNewsImage extends React.Component{
 		return(
 			<div className="newsImage">
 				<Card title={this.props.imageTitle} >
-					<ul className="clearfix layout_flex">
+					<ul className="clearfix">
 						{newsList}
 					</ul>
 				</Card>

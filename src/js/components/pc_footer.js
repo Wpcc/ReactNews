@@ -7,8 +7,10 @@ export default class PCFooter extends React.Component{
 			<header>
 				<Row>
 					<Col span={2}></Col>
-					<Col span={20} className='footer'>
-						&copy;&nbsp;2016 ReactNews. All Rights Reserved.
+					<Col span={20} className='father-footer'>
+						<div className="footer">
+							&copy;&nbsp;2016 ReactNews. All Rights Reserved.
+						</div>
 					</Col>
 					<Col span={2}></Col>
 				</Row>
